@@ -110,10 +110,11 @@ body{
     position: fixed;
     padding: 3rem;
     inset: 7rem 2rem auto;
-    background: var(--white);
+    background: var(--lightGrayishBlue);
     border-radius: 1rem;
     max-width: 35rem;
     margin-inline: auto;
+    z-index: 1;
   }
 
   .header-container[data-overlay]::before {
@@ -154,6 +155,108 @@ body{
     display: none;
   }
 }
+
+/* details section*/
+.details-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1rem;
+  padding-left: 5rem;
+  background-color: var(--veryLightGray);
+  justify-content: center;
+  height: 640px;
+  
+}
+
+.brief-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.brief-details h1 {
+  font-size: 50px;
+  font-weight: var(--fw-regular);
+  padding-bottom: 2rem;
+}
+
+.brief-details p {
+  font-weight: var(--fw-regular);
+  color: var(--grayishBlue);
+  padding-bottom: 2rem;
+  max-width: 28rem;
+  line-height: 1.6rem;
+}
+
+.mockup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('./images/bg-intro-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -43px;
+  background-position-y: -228px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.mockup-img {
+  width: 100%;
+  transform: translate(132px,-140px);
+}
+
+@media (max-width:76rem) {
+  .details-container {
+    all: unset;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+  }
+  .brief-details{
+    align-items: center;
+    padding: 0rem 1.5rem 5rem;
+  }
+  .brief-details h1{
+     font-size: 48px;
+     text-align: center;
+     margin-top: -40px;
+     line-height: 50px;
+  }
+
+  .brief-details p {
+    text-align: center;
+  }
+
+  .mockup{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    background: url("/images/bg-intro-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+
+  }
+
+  .mockup-img{
+    all: unset;
+    width: 100%;
+    transform: translate(0px,-100px );
+  }
+
+
+
+
+  
+}
+
 
 
 
