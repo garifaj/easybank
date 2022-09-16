@@ -65,7 +65,7 @@ body{
   justify-content: space-between;
   align-content: center;
   padding: 3rem 5rem;
-  background-color: var(--veryLightGray);
+  background-color: var(--white);
 }
 
 .request_btn {
@@ -203,6 +203,7 @@ body{
   font-size: 50px;
   font-weight: var(--fw-regular);
   padding-bottom: 2rem;
+  color: var(--darkBlue);
 }
 
 .brief-details p {
@@ -289,6 +290,7 @@ body{
 .leverage h1 {
   font-weight: var(--fw-regular);
   font-size: 40px;
+  color: var(--darkBlue);
 }
 
 .leverage p {
@@ -303,6 +305,7 @@ body{
 .reason-cards h2 {
   font-weight: var(--fw-regular);
   padding: 2rem 0rem;
+  color: var(--darkBlue);
 }
 
 .reason-cards p {
@@ -345,3 +348,87 @@ body{
   
 }
 
+/* articles section */
+
+.articles-container {
+  background-color: var(--veryLightGray);
+  padding: 4rem 6.5rem 6rem 5rem;
+}
+
+.articles-container h1 {
+  font-weight: var(--fw-regular);
+  font-size: 40px;
+  padding: 2rem 0rem 4rem ;
+  color: var(--darkBlue);
+}
+
+.cards {
+  display: flex;
+  gap:1.5rem;
+}
+
+.cards div {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.cards img {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  min-height: 15rem;
+}
+
+.card-info {
+  padding: 1rem 2rem;
+}
+
+.card-info p {
+  padding: 1rem 0rem;
+  font-size: 15px;
+}
+
+.card-info a {
+  text-decoration: none;
+  color: var(--darkBlue);
+}
+.cards div:hover a{
+  color:var(--brightCyan)
+}
+
+@media (max-width: 76rem){
+  .articles-container {
+    all: unset;
+    display: block;
+    padding:0rem 1.5rem 7rem;
+    background-color: var(--veryLightGray);
+  }
+ .articles-container h1 {
+    padding: 7rem 0rem 3rem;
+    text-align: center;
+  }
+ .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .cards div {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white);
+  }
+
+  .cards img {
+    all: unset;
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  
+
+}
